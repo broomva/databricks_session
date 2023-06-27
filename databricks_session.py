@@ -6,6 +6,8 @@ from pydantic import validator
 import re
 import mlflow
 
+def main():
+    print('Databricks Session Utility Installed')
 
 class SparkSession(BaseSettings):
     ...
