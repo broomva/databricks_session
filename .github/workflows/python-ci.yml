@@ -60,11 +60,6 @@ jobs:
             done
           ' sh {} +
         fi
-    # - name: Handle Versioning
-    #   uses: google-github-actions/release-please-action@v3
-    #   with:
-    #     release-type: python
-    #     package-name: release-please-action
     - name: Auto Lint with black, pylint
       run: |
         black .
@@ -78,10 +73,16 @@ jobs:
         git commit -m "chore(versioning): versioning and linting changes" || echo "No changes to commit"
         git push || echo "No changes to push"
 
-  release-please:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: google-github-actions/release-please-action@v3
-        with:
-          release-type: node
-          package-name: release-please-action
+    - name: Handle Versioning
+      uses: google-github-actions/release-please-action@v3
+      with:
+        release-type: python
+        package-name: release-please-action
+
+  # release-please:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: google-github-actions/release-please-action@v3
+  #       with:
+  #         release-type: node
+  #         package-name: release-please-action
