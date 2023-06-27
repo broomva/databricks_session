@@ -7,19 +7,6 @@ import re
 import mlflow
 
 
-class MLFlowSession(BaseSettings):
-    deployment_client: Optional[object] = None
-
-    class Config:
-        env_file = ".env"
-
-    def get_deployment_client(self, client_name: str):
-        from mlflow.deployments import get_deploy_client
-
-        self.deployment_client = get_deploy_client(client_name)
-        return self.deployment_client
-
-
 class SparkSession(BaseSettings):
     ...
 
@@ -41,6 +28,19 @@ class DatabricksSparkSession(SparkSession):
             conn_string=connection_string
         ).getOrCreate()
         return self.spark
+
+
+class MLFlowSession(BaseSettings):
+    deployment_client: Optional[object] = None
+
+    class Config:
+        env_file = ".env"
+
+    def get_deployment_client(self, client_name: str):
+        from mlflow.deployments import get_deploy_client
+
+        self.deployment_client = get_deploy_client(client_name)
+        return self.deployment_client
 
 
 class DatabricksMLFlowSession(MLFlowSession):

@@ -1,2 +1,1 @@
 include *
-recursive-include tsecli/commands *.py *.sql *.yml *.html *.md .gitkeep .gitignore .env

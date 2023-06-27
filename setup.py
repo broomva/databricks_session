@@ -42,7 +42,6 @@ release_status = "Development Status :: 3 - Alpha"
 
 with open("requirements.txt") as f:
     required = f.read().splitlines()
-extras = {"protobuf": ["protobuf<5.0.0dev"]}
 
 # Setup boilerplate below this line.
 
@@ -80,7 +79,6 @@ setuptools.setup(
     ],
     packages=find_packages(),
     install_requires=required,
-    extras_require=extras,
     python_requires=">=3.8",
     include_package_data=True,
     setup_requires=["setuptools", "wheel"],
