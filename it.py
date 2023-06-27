@@ -1,5 +1,6 @@
-#%%
+# %%
 from databricks_session import DatabricksSQLSession
+
 # %%
 spark_sql = DatabricksSQLSession()
 # %%
@@ -8,15 +9,17 @@ print(pdf.head())
 # %%
 
 from databricks_session import DatabricksSparkSession
+
 # %%
 spark = DatabricksSparkSession().get_session()
 
 # %%
-sdf = spark.read.table('microchip_logs')
+sdf = spark.read.table("microchip_logs")
 print(sdf.show())
 # %%
 
 from databricks_session import DatabricksMLFlowSession
+
 # %%
 mlflow_session = DatabricksMLFlowSession().get_session()
 

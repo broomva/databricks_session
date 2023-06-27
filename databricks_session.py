@@ -8,8 +8,10 @@ import pandas as pd
 import re
 import mlflow
 
+
 def main():
-    print('Databricks Session Utility Installed')
+    print("Databricks Session Utility Installed")
+
 
 class SparkSession(BaseSettings):
     ...
@@ -26,12 +28,14 @@ class DatabricksSparkSession(SparkSession):
 
     def get_session(self):
         from databricks.connect import DatabricksSession
+
         print("Creating a Databricks Compute Cluster Spark Session")
         connection_string = f"sc://{self.databricks_host}:443/;token={self.databricks_token};x-databricks-cluster-id={self.databricks_cluster_id}"
         self.spark = DatabricksSession.builder.remote(
             conn_string=connection_string
         ).getOrCreate()
         return self.spark
+
 
 class DatabricksSQLSession(SparkSession):
     databricks_token: str
@@ -49,7 +53,7 @@ class DatabricksSQLSession(SparkSession):
             with adb_sql.connect(
                 server_hostname=self.databricks_host,
                 http_path=self.databricks_sql_http_path,
-                access_token=self.databricks_token
+                access_token=self.databricks_token,
             ) as adb_connection:
                 try:
                     with adb_connection.cursor() as cursor:
