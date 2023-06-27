@@ -1,6 +1,5 @@
 import io
 import os
-import json
 import setuptools
 import glob
 import sys
