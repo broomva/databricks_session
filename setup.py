@@ -6,9 +6,10 @@ import glob
 import sys
 from setuptools import find_packages, find_namespace_packages
 
-if sys.version_info < (3, 10):
+if sys.version_info < (3, 8):
+    find_namespace_packages()
     print("Error: databricks_session does not support this version of Python.")
-    print("Please upgrade to Python 3.10 or higher.")
+    print("Please upgrade to Python 3.8 or higher.")
     sys.exit(1)
 
 
@@ -49,7 +50,7 @@ extras = {"protobuf": ["protobuf<5.0.0dev"]}
 package_root = os.path.abspath(os.path.dirname(__file__))
 
 version = {}
-with open(os.path.join(package_root, "package.json")) as fp:
+with open(os.path.join(package_root, "package.json")) as f:
     version = json.loads(f.read())["version"]
 
 readme_filename = os.path.join(package_root, "README.md")
@@ -76,19 +77,13 @@ setuptools.setup(
         "Programming Language :: Python :: 3.11",
         "Topic :: Software Development :: Libraries :: Python Modules :: Databricks",
     ],
-    platforms="Posix; MacOS X; Windows",
     packages=find_packages(),
-    data_files=data_files_structure,
-    namespace_packages=find_namespace_packages(),
     install_requires=required,
     extras_require=extras,
-    python_requires=">=3.10",
-    include_package_data=True,
+    python_requires=">=3.8",
     include_package_data=True,
     setup_requires=["setuptools", "wheel"],
     tests_require=["pytest"],
-    python_requires=">=3.10",
-    nstall_requires=required,
     test_suite="tests",
     zip_safe=False,
     url="https://github.com/Broomva/databricks_session",
