@@ -1,5 +1,14 @@
 # Changelog
 
+## [0.2.1](https://github.com/Broomva/databricks_session/compare/v0.2.0...v0.2.1) (2023-06-27)
+
+
+### Bug Fixes
+
+* **black:** fix black formatting ([8efe808](https://github.com/Broomva/databricks_session/commit/8efe8089c311a28dcedfcd5d919eaa09c02839a0))
+* **build:** corrected poetry include ([5f4eb27](https://github.com/Broomva/databricks_session/commit/5f4eb277bfe9f5af24a8badfe90c77551fce449d))
+* **pyproject:** add entrypoint script ([b86cf77](https://github.com/Broomva/databricks_session/commit/b86cf770dabf2393e6fee76a2fbce4bd5d02fae1))
+
 ## [0.2.0](https://github.com/Broomva/databricks_session/compare/v0.1.11...v0.2.0) (2023-06-27)
 
 
