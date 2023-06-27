@@ -9,8 +9,8 @@
 name: python-cd
 
 on:
-  release:
-    types: [published]
+  repository_dispatch:
+    types: [python-ci] # trigger when pr is merged and ci is successful
   workflow_dispatch:
     inputs:
       logLevel:
