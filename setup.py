@@ -62,6 +62,7 @@ setuptools.setup(
     version=version,
     description=description,
     long_description=readme,
+    long_description_content_type="text/markdown",
     author="Carlos D. Escobar-Valbuena",
     author_email="carlosdavidescobar@gmail.com",
     license="MIT",
