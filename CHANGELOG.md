@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.11](https://github.com/Broomva/databricks_session/compare/v0.1.10...v0.1.11) (2023-06-27)
+
+
+### Bug Fixes
+
+* **README:** update README.md typo ([7b8f514](https://github.com/Broomva/databricks_session/commit/7b8f514d4ba4647a39fbe9f371892b4eeca75b5c))
+* **setup:** testing requirements ([f3748f5](https://github.com/Broomva/databricks_session/commit/f3748f5ff2de63eb7f305b48ec74a0341b84b4bf))
+
 ## [0.1.10](https://github.com/Broomva/databricks_session/compare/v0.1.9...v0.1.10) (2023-06-27)
 
 
