@@ -68,7 +68,7 @@ databricks_cluster_id=''
 ```python
 import databricks_session 
 
-# Create a Snowpark session
+# Create a Spark session
 spark = DatabricksSparkSession().get_session()
 
 # Connect to MLFLow Artifact Server
