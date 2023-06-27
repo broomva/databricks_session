@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.0](https://github.com/Broomva/databricks_session/compare/v0.0.2...v0.1.0) (2023-06-27)
+
+
+### Features
+
+* **docs:** fixed project url in setup.py ([3ffca56](https://github.com/Broomva/databricks_session/commit/3ffca561b84011f7f5035b45546151f3b9e1b8c9))
+
 ## [0.0.2](https://github.com/Broomva/databricks_session/compare/0.0.1...v0.0.2) (2023-06-27)
 
 
