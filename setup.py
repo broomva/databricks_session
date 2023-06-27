@@ -1,14 +1,15 @@
+import glob
 import io
 import os
-import setuptools
-import glob
 import sys
-from setuptools import find_packages, find_namespace_packages
 
-if sys.version_info < (3, 8):
+import setuptools
+from setuptools import find_namespace_packages, find_packages
+
+if sys.version_info < (3, 10):
     find_namespace_packages()
     print("Error: databricks_session does not support this version of Python.")
-    print("Please upgrade to Python 3.8 or higher.")
+    print("Please upgrade to Python 3.10 or higher.")
     sys.exit(1)
 
 
@@ -79,7 +80,7 @@ setuptools.setup(
     ],
     packages=find_packages(),
     install_requires=required,
-    python_requires=">=3.8",
+    python_requires=">=3.10.11",
     include_package_data=True,
     setup_requires=["setuptools", "wheel"],
     tests_require=["pytest"],
