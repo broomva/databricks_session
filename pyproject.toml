@@ -5,7 +5,7 @@ description = "A simple util to get a spark and mlflow session objects from an .
 authors = ["Carlos Escobar <carlosdavidescobar@gmai.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "databricks_session.py"}]
+packages = [{include = "*"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -25,3 +25,6 @@ black = "^23.3.0"
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+databricks_session = 'main:main'
