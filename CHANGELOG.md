@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.7](https://github.com/Broomva/databricks_session/compare/v0.1.6...v0.1.7) (2023-06-27)
+
+
+### Bug Fixes
+
+* **ci:** added dispatch event to trigger cd ([bb48ef2](https://github.com/Broomva/databricks_session/commit/bb48ef2159e0151daf545ad68714b9cef09ec767))
+* **ci:** added pr merge validation gate ([85e7212](https://github.com/Broomva/databricks_session/commit/85e72128d5521ed17716a3fde3f96c506c729fe5))
+
 ## [0.1.6](https://github.com/Broomva/databricks_session/compare/v0.1.5...v0.1.6) (2023-06-27)
 
 
