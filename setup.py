@@ -75,7 +75,7 @@ setup(
     nstall_requires=required,
     test_suite="tests",
     zip_safe=False,
-    url="https://github.com/Occlusion-Solutions/databricks_session.git",
+    url="https://github.com/Broomva/databricks_session",
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",

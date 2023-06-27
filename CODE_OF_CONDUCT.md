@@ -71,11 +71,11 @@ behavior is threatening or harassing, report it. We are dedicated to providing
 an environment where participants feel welcome and safe.
 
 
-Reports should be directed to *support@occlusion.solutions*, the
-Project Steward(s) for *Occlusion LLM Explorer*. It is the Project Steward’s duty to
+Reports should be directed to *carlosdavidescobar@gmail.com*, the
+Project Steward(s) for *Databricks Session*. It is the Project Steward’s duty to
 receive and address reported violations of the code of conduct. If for any reason you
 are uncomfortable reaching out to the Project Steward, please email
-carlos@occlusion.solutions
+carlosdavidescobar@gmail.com
 
 We will investigate every complaint, but you may not receive a direct response.
 We will use our discretion in determining when and how to follow up on reported
