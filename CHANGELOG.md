@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.8](https://github.com/Broomva/databricks_session/compare/v0.1.7...v0.1.8) (2023-06-27)
+
+
+### Bug Fixes
+
+* **ci:** add git pull to ci workflow ([#2](https://github.com/Broomva/databricks_session/issues/2)) ([3e3db17](https://github.com/Broomva/databricks_session/commit/3e3db17778e47a009b635ebc91d9904374819287))
+
 ## [0.1.7](https://github.com/Broomva/databricks_session/compare/v0.1.6...v0.1.7) (2023-06-27)
 
 
