@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.1](https://github.com/Broomva/databricks_session/compare/v0.1.0...v0.1.1) (2023-06-27)
+
+
+### Bug Fixes
+
+* **setup:** fixed versioning in setup ([f4695c6](https://github.com/Broomva/databricks_session/commit/f4695c6cc433c10e4454c0604619382efc00161d))
+
 ## [0.1.0](https://github.com/Broomva/databricks_session/compare/v0.0.2...v0.1.0) (2023-06-27)
 
 
