@@ -1,44 +1,16 @@
+import io
+import os
+import json
+import setuptools
 import glob
 import re
 import sys
-
-from setuptools import find_packages, setup
+from setuptools import find_packages, setup, find_namespace_packages
 
 if sys.version_info < (3, 10):
     print("Error: databricks_session does not support this version of Python.")
     print("Please upgrade to Python 3.10 or higher.")
     sys.exit(1)
-
-try:
-    from setuptools import find_namespace_packages
-
-    find_namespace_packages()
-except ImportError:
-    # the user has a downlevel version of setuptools.
-    print("Error: databricks_session requires setuptools v40.1.0 or higher.")
-    print(
-        'Please upgrade setuptools with "pip install --upgrade setuptools" '
-        "and try again"
-    )
-    sys.exit(1)
-
-version = "#{PKG_VAR_SETUP}#"
-package_name = "databricks_session"
-
-package_env = re.sub(r"[^a-zA-Z]", "", version)
-
-if "PKGVARSETUP" in package_env:
-    version = "0.0.2"
-
-package_env = re.sub(r"[^a-zA-Z]", "", version)
-
-# Check if any letters were found
-if len(package_env) > 0:
-    package_name += f"_{package_env}"
-
-
-with open("requirements.txt") as f:
-    required = f.read().splitlines()
 
 
 def prepare_data_files(directory, extensions):
@@ -58,16 +30,61 @@ data_files_structure = [
     ),
 ]
 
-print(package_name, version)
-setup(
-    name=package_name,
+# Package metadata.
+name = "databricks_session"
+description = (
+    "A simple util to get a spark and mlflow session objects from an .env file"
+)
+# Should be one of:
+# 'Development Status :: 3 - Alpha'
+# 'Development Status :: 4 - Beta'
+# 'Development Status :: 5 - Production/Stable'
+release_status = "Development Status :: 3 - Alpha"
+
+with open("requirements.txt") as f:
+    required = f.read().splitlines()
+extras = {"protobuf": ["protobuf<5.0.0dev"]}
+
+# Setup boilerplate below this line.
+
+package_root = os.path.abspath(os.path.dirname(__file__))
+
+version = {}
+with open(os.path.join(package_root, "package.json")) as fp:
+    version = json.loads(f.read())["version"]
+
+readme_filename = os.path.join(package_root, "README.md")
+with io.open(readme_filename, encoding="utf-8") as readme_file:
+    readme = readme_file.read()
+
+setuptools.setup(
+    name=name,
     version=version,
+    description=description,
+    long_description=readme,
     author="Carlos D. Escobar-Valbuena",
     author_email="carlosdavidescobar@gmail.com",
-    description="A simple util to get a spark and mlflow session objects from an .env file",
-    long_description=open("README.md", "r").read(),
-    long_description_content_type="text/markdown",
+    license="MIT",
+    classifiers=[
+        release_status,
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+        "Development Status :: 3 - Alpha",
+        "Intended Audience :: Developers",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
+        "Topic :: Software Development :: Libraries :: Python Modules :: Databricks",
+    ],
+    platforms="Posix; MacOS X; Windows",
     packages=find_packages(),
+    data_files=data_files_structure,
+    namespace_packages=find_namespace_packages(),
+    install_requires=required,
+    extras_require=extras,
+    python_requires=">=3.10",
+    include_package_data=True,
     include_package_data=True,
     setup_requires=["setuptools", "wheel"],
     tests_require=["pytest"],
@@ -76,16 +93,6 @@ setup(
     test_suite="tests",
     zip_safe=False,
     url="https://github.com/Broomva/databricks_session",
-    classifiers=[
-        "Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",
-        "Development Status :: 3 - Alpha",
-        "Intended Audience :: Developers",
-        "Programming Language :: Python :: 3.10",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-    ],
-    install_requires=required,
     package_data={
         "databricks_session": [
             "*.json",
