@@ -50,8 +50,9 @@ extras = {"protobuf": ["protobuf<5.0.0dev"]}
 package_root = os.path.abspath(os.path.dirname(__file__))
 
 version = {}
-with open(os.path.join(package_root, "package.json")) as f:
-    version = json.loads(f.read())["version"]
+with open(os.path.join(package_root, "version.py")) as fp:
+    exec(fp.read(), version)
+version = version["__version__"]
 
 readme_filename = os.path.join(package_root, "README.md")
 with io.open(readme_filename, encoding="utf-8") as readme_file:
