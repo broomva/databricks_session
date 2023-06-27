@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.2.0](https://github.com/Broomva/databricks_session/compare/v0.1.11...v0.2.0) (2023-06-27)
+
+
+### Features
+
+* **databricks_session:** add support for databricks sql endpoint ([f3a9f22](https://github.com/Broomva/databricks_session/commit/f3a9f2267a6c2925aa9b8b9d849ef51a1ec8e407))
+
+
+### Bug Fixes
+
+* **poetry:** added poetry dependencies management ([878c8d5](https://github.com/Broomva/databricks_session/commit/878c8d53e4a3a8a07fe5d329e55d8efa04fdff2a))
+
 ## [0.1.11](https://github.com/Broomva/databricks_session/compare/v0.1.10...v0.1.11) (2023-06-27)
 
 
