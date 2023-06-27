@@ -76,7 +76,7 @@ setuptools.setup(
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.10",
         "Programming Language :: Python :: 3.11",
-        "Topic :: Software Development :: Libraries :: Python Modules :: Databricks",
+        "Topic :: Software Development :: Libraries :: Python Modules",
     ],
     packages=find_packages(),
     install_requires=required,
