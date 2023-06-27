@@ -79,6 +79,14 @@ jobs:
         release-type: python
         package-name: release-please-action
 
+
+    - name: Dispatch custom event for python-cd workflow
+      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+      uses: peter-evans/repository-dispatch@v1
+      with:
+        token: ${{ secrets.PAT }} # assuming you've set this secret in your repo
+        repository: ${{ github.repository }}
+        event-type: python-ci
   # release-please:
   #   runs-on: ubuntu-latest
   #   steps:
