@@ -80,8 +80,18 @@ jobs:
         package-name: release-please-action
 
 
+    - name: Check if commit is a result of PR merge
+      id: check
+      run: |
+        commit_message=$(git log --format=%B -n 1 ${{ github.sha }})
+        if [[ "$commit_message" == *"Merge pull request #"* ]]; then 
+          echo "::set-output name=is_pr_merge::true"
+        else 
+          echo "::set-output name=is_pr_merge::false"
+        fi
+          
     - name: Dispatch custom event for python-cd workflow
-      if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' && github.event.pull_request.merged == true }}
+      if: ${{ steps.check.outputs.is_pr_merge == 'true' }}
       uses: peter-evans/repository-dispatch@v1
       with:
         token: ${{ secrets.PAT }} # assuming you've set this secret in your repo
