@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.2](https://github.com/Broomva/databricks_session/compare/v0.1.1...v0.1.2) (2023-06-27)
+
+
+### Bug Fixes
+
+* **ci:** updated release-please order ([1af2f0f](https://github.com/Broomva/databricks_session/commit/1af2f0fe1bfb94204a145cdb7931ed8e2299ecaa))
+* **setup.py:** fix setup.py coverage ([aa01d8e](https://github.com/Broomva/databricks_session/commit/aa01d8ea97be486b634470b8454efef42c8f3690))
+
 ## [0.1.1](https://github.com/Broomva/databricks_session/compare/v0.1.0...v0.1.1) (2023-06-27)
 
 
