@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.4](https://github.com/Broomva/databricks_session/compare/v0.1.3...v0.1.4) (2023-06-27)
+
+
+### Bug Fixes
+
+* **setup:** add version.py to setup.py ([93855ba](https://github.com/Broomva/databricks_session/commit/93855ba11a96fded368421952a2f1192f25da717))
+* **setup:** removed unused import ([a21ed52](https://github.com/Broomva/databricks_session/commit/a21ed529a35cafc40adbd543a6fa05ffc6751506))
+
 ## [0.1.3](https://github.com/Broomva/databricks_session/compare/v0.1.2...v0.1.3) (2023-06-27)
 
 
