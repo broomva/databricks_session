@@ -15,7 +15,11 @@ pydantic = "^1.10.9"
 python-dotenv = "^1.0.0"
 protobuf = "^4.23.3"
 typing-extensions = "^4.6.3"
+databricks-sql-connector = "^2.7.0"
 
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.0"
 
 [build-system]
 requires = ["poetry-core"]

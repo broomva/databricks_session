@@ -2,7 +2,9 @@ from pydantic import BaseSettings
 from typing import Optional
 import os
 from pydantic import validator
-
+from databricks import sql as adb_sql
+import os
+import pandas as pd
 import re
 import mlflow
 
@@ -24,12 +26,42 @@ class DatabricksSparkSession(SparkSession):
 
     def get_session(self):
         from databricks.connect import DatabricksSession
-
+        print("Creating a Databricks Compute Cluster Spark Session")
         connection_string = f"sc://{self.databricks_host}:443/;token={self.databricks_token};x-databricks-cluster-id={self.databricks_cluster_id}"
         self.spark = DatabricksSession.builder.remote(
             conn_string=connection_string
         ).getOrCreate()
         return self.spark
+
+class DatabricksSQLSession(SparkSession):
+    databricks_token: str
+    databricks_host: str
+    databricks_sql_http_path: str
+
+    def query_lakehouse(self, query) -> pd.DataFrame:
+        """
+        Executes databricks sql query and returns result as data as dataframe.
+        Example of parameters
+        :param sql: sql query to be executed
+        """
+        print("Opening a Databricks SQL Cursor Connection")
+        try:
+            with adb_sql.connect(
+                server_hostname=self.databricks_host,
+                http_path=self.databricks_sql_http_path,
+                access_token=self.databricks_token
+            ) as adb_connection:
+                try:
+                    with adb_connection.cursor() as cursor:
+                        cursor.execute(query)
+                        column_names = [desc[0] for desc in cursor.description]
+                        data = cursor.fetchall()
+                        df = pd.DataFrame(data, columns=column_names)
+                        return df
+                except Exception as e:
+                    print(f"Error in cursor {e}")
+        except Exception as e:
+            print(f"Error in connection {e}")
 
 
 class MLFlowSession(BaseSettings):
@@ -61,6 +93,7 @@ class DatabricksMLFlowSession(MLFlowSession):
         return path
 
     def get_session(self):
+        print("Creating a Databricks MLFlow Session")
         os.environ["experiment_id"] = self.databricks_experiment_id
         # Set the Databricks credentials
         os.environ["DATABRICKS_HOST"] = self.databricks_host
