@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.1.6](https://github.com/Broomva/databricks_session/compare/v0.1.5...v0.1.6) (2023-06-27)
+
+
+### Bug Fixes
+
+* **cd:** updated cd trigger to use repository_dispatch ([b0caa6e](https://github.com/Broomva/databricks_session/commit/b0caa6ee2e0c8ab2642d5633978601c7b252d1e7))
+* **setup.py:** fixed build classifiers ([ce281f7](https://github.com/Broomva/databricks_session/commit/ce281f738400806cabbdb535d87e4ef3a4b08240))
+
 ## [0.1.5](https://github.com/Broomva/databricks_session/compare/v0.1.4...v0.1.5) (2023-06-27)
 
 
