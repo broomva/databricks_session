@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.10](https://github.com/Broomva/databricks_session/compare/v0.1.9...v0.1.10) (2023-06-27)
+
+
+### Bug Fixes
+
+* **requirements:** testing requirements fixes ([32a00f6](https://github.com/Broomva/databricks_session/commit/32a00f685261ff4d449417f2c19c449591bc047b))
+
 ## [0.1.9](https://github.com/Broomva/databricks_session/compare/v0.1.8...v0.1.9) (2023-06-27)
 
 
