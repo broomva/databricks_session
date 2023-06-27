@@ -3,9 +3,8 @@ import os
 import json
 import setuptools
 import glob
-import re
 import sys
-from setuptools import find_packages, setup, find_namespace_packages
+from setuptools import find_packages, find_namespace_packages
 
 if sys.version_info < (3, 10):
     print("Error: databricks_session does not support this version of Python.")
