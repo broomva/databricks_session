@@ -1,11 +1,12 @@
+import glob
 import re
 import sys
-import glob
+
 from setuptools import find_packages, setup
 
-if sys.version_info < (3, 6):
+if sys.version_info < (3, 10):
     print("Error: databricks_session does not support this version of Python.")
-    print("Please upgrade to Python 3.6 or higher.")
+    print("Please upgrade to Python 3.10 or higher.")
     sys.exit(1)
 
 try:
@@ -27,7 +28,7 @@ package_name = "databricks_session"
 package_env = re.sub(r"[^a-zA-Z]", "", version)
 
 if "PKGVARSETUP" in package_env:
-    version = "0.0.1"
+    version = "0.0.2"
 
 package_env = re.sub(r"[^a-zA-Z]", "", version)
 
