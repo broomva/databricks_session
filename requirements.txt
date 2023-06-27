@@ -1,5 +1,7 @@
+databricks-cli==0.17.7
+databricks-connect==13.1.0
+databricks-sdk==0.1.11
 pydantic
 python-dotenv
 typing-extensions
-databricks-connect==13.1.0
-mlflow==2.3.0
+mlflow
