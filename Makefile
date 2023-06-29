@@ -6,6 +6,11 @@ install: local_build_and_deploy
 
 reinstall : create_env && install
 
+rebuild: 
+	pip uninstall databricks_session -y \
+	&& poetry build  \
+	&& pip install .
+
 local_build_and_deploy: 
 	pip uninstall databricks_session -y \
 	&& python setup.py install \

@@ -1,5 +1,6 @@
-from databricks_session import *
+from databricks_session.databricks_session import *
 
+__all__ = list(globals().keys())
 
 def entrypoint():
-    print("Databricks Session Utility Installed")
+    init()

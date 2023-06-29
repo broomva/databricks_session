@@ -8,6 +8,9 @@ import pandas as pd
 import re
 import mlflow
 
+def init():
+    print("Databricks Session Utility Installed")
+
 
 class SparkSession(BaseSettings):
     ...
