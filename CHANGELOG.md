@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.2.2](https://github.com/Broomva/databricks_session/compare/v0.2.1...v0.2.2) (2023-06-29)
+
+
+### Bug Fixes
+
+* **databricks_session:** added sqlalcheme and jdbc dialect ([7ad588a](https://github.com/Broomva/databricks_session/commit/7ad588aa82e05d4857ac4a8f1d51622198ddeb46))
+* **databricks_session:** fix databricks_session.py sql entrypoint ([e25a9c3](https://github.com/Broomva/databricks_session/commit/e25a9c32b6f7e03b275e3126b406f69c0c43ef98))
+
 ## [0.2.1](https://github.com/Broomva/databricks_session/compare/v0.2.0...v0.2.1) (2023-06-27)
 
 
