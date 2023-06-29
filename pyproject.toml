@@ -5,7 +5,7 @@ description = "A simple util to get a spark and mlflow session objects from an .
 authors = ["Carlos Escobar <carlosdavidescobar@gmai.com>"]
 license = "MIT"
 readme = "README.md"
-packages = [{include = "*"}]
+packages = [{include = "*.py"}]
 
 [tool.poetry.dependencies]
 python = "^3.10"

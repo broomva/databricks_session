@@ -1,6 +1,4 @@
-def main():
-    print("Databricks Session utility is installed")
-
+from databricks_session import entrypoint
 
 if __name__ == "__main__":
-    main()
+    entrypoint()
