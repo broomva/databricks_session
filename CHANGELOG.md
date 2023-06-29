@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.3](https://github.com/Broomva/databricks_session/compare/v0.2.2...v0.2.3) (2023-06-29)
+
+
+### Bug Fixes
+
+* **entrypoint:** fix entrypoint ([b6af572](https://github.com/Broomva/databricks_session/commit/b6af572602dea33855bce2f7571846e8f7717132))
+
 ## [0.2.2](https://github.com/Broomva/databricks_session/compare/v0.2.1...v0.2.2) (2023-06-29)
 
 
