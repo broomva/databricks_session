@@ -42,7 +42,7 @@ class DatabricksSQLSession(SparkSession):
     databricks_host: str
     databricks_sql_http_path: str
 
-    def query_lakehouse(self, query) -> pd.DataFrame:
+    def sql(self, query) -> pd.DataFrame:
         """
         Executes databricks sql query and returns result as data as dataframe.
         Example of parameters
