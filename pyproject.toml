@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "databricks-session"
-version = "0.2.3"
+version = "0.3.0"
 description = "A simple util to get a spark and mlflow session objects from an .env file"
 authors = ["Carlos D. Escobar-Valbuena <carlosdavidescobar@gmail.com>"]
 license = "MIT"

@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/Broomva/databricks_session/compare/v0.2.3...v0.3.0) (2023-11-07)
+
+
+### Features
+
+* removed uneeded files and updated example.py and .env.example ([57e3af0](https://github.com/Broomva/databricks_session/commit/57e3af0223d30d149ceb59751536c8f6740978e2))
+
 ## [0.2.3](https://github.com/Broomva/databricks_session/compare/v0.2.2...v0.2.3) (2023-06-29)
 
 
