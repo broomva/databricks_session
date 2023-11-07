@@ -6,12 +6,12 @@ from databricks_session import DatabricksSQLSession
 # %%
 spark_sql = DatabricksSQLSession()
 # %%
-pdf = spark_sql.sql("select * from microchip_logs limit 10")
+pdf = spark_sql.sql("select * from samples.nyctaxi.trips limit 10")
 print(pdf.head())
 # %%
 sqlalchemy_engine = spark_sql.get_session()
 # %%
-df = spark_sql.read(sqlalchemy_engine, "microchip_logs")
+df = spark_sql.read(sqlalchemy_engine, "samples.nyctaxi.trips")
 
 # %%
 from databricks_session import DatabricksJDBCSession
@@ -28,7 +28,7 @@ from databricks_session import DatabricksSparkSession
 spark = DatabricksSparkSession().get_session()
 
 # %%
-sdf = spark.read.table("microchip_logs")
+sdf = spark.read.table("samples.nyctaxi.trips")
 print(sdf.show())
 # %%
 

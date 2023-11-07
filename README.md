@@ -63,6 +63,7 @@ databricks_token=''
 databricks_username=''
 databricks_password=''
 databricks_cluster_id=''
+databricks_sql_http_path=''
 ```
 
 ```python
