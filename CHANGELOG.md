@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.1](https://github.com/broomva/databricks_session/compare/v0.3.0...v0.3.1) (2024-04-08)
+
+
+### Bug Fixes
+
+* added workflows module ([6efde17](https://github.com/broomva/databricks_session/commit/6efde179698ce6cbd06f8f6b4dbd7833b623df3d))
+
 ## [0.3.0](https://github.com/Broomva/databricks_session/compare/v0.2.3...v0.3.0) (2023-11-07)
 
 
